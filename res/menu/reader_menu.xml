@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:neowinapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/play_audio_button"
+        android:title="Read"
+        android:icon="@android:drawable/ic_media_play"
+        neowinapp:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/open_webview"
+        android:title="Open Web"
+        android:icon="@android:drawable/ic_menu_upload"
+        neowinapp:showAsAction="always|withText"/>
+
+</menu>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/tool_bar" >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:background="#fff" >
+
+        <LinearLayout
+        	android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+        	android:paddingLeft="10dp"
+        	android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/titletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title Text"
+                android:textColor="#3f3c61"
+				android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/authortext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author Text"
+                android:textColor="#3f3c61"
+                android:paddingBottom="8dp" 
+                android:textStyle="italic"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/backdrop" />
+            
+            <TextView
+                android:id="@+id/articletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Article Text"
+                android:textColor="#252525"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+    </ScrollView>
+    
+	<!-- <TextView 
+        android:id="@+id/voiceButton"
+        android:text="STOP"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"
+        android:alpha="0.7"
+        android:textColor="#fff"
+        android:background="#f00"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"/>  -->
+        
+	<Button 
+	    android:id="@+id/voiceButton"
+	    android:background="@drawable/stop_button"
+        android:visibility="gone"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+    
+    
+
+</RelativeLayout>

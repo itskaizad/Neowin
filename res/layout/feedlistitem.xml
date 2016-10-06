@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/imageView1"
+        android:paddingLeft="10dp" >
+        
+        <TextView 
+            android:id="@+id/titletext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="left"
+            android:textColor="#173d5b"
+            android:text="This is filler text for instructions."
+            android:textSize="16sp"/>
+        <TextView 
+            android:id="@+id/stamptext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titletext"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:textColor="#999"
+            android:textStyle="italic"
+            android:text="This much time."
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neowin.newsfeed.MainActivity" >
+
+    <include
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/tool_bar" >
+    </include>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tool_bar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:text="NEWS"
+            android:textColor="#1e5086"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+        
+        <TextView
+            android:id="@+id/loadMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:text="Loading..."
+            android:textColor="#aaa"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+        
+
+        <LinearLayout
+            android:id="@+id/divbar"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/head"
+            android:background="@color/ColorPrimaryDark"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshPulldown"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/divbar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/divbar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+            </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/app_version"
+        android:textSize="15sp" />
+    
+    <TextView 
+        android:id="@+id/voiceButton"
+        android:text="STOP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"
+        android:alpha="0.7"
+        android:visibility="gone"
+        android:textColor="#fff"
+        android:background="#f00"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"/>
+    
+</RelativeLayout>
